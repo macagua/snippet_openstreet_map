@@ -1,18 +1,18 @@
-odoo.define('snippet_openstreet_map.s_google_map_editor', function (require) {
+odoo.define('snippet_openstreet_map.s_openstreet_map_editor', function (require) {
     'use strict';
 
     var ajax = require('web.ajax');
-    var Dialog = require("web_editor.widget").Dialog;
     var core = require('web.core');
+    var Dialog = require("web_editor.widget").Dialog;
+    var openStreetScriptLoaded = require("snippet_openstreet_map.s_openstreet_map_frontend").openStreetScriptLoaded;
     var s_options = require('web_editor.snippets.options');
-    var googleScriptLoaded = require("snippet_openstreet_map.s_google_map_frontend").googleScriptLoaded;
 
     var _t = core._t;
 
-    ajax.loadXML('/snippet_openstreet_map/static/src/xml/s_google_map_modal.xml', core.qweb);
+    ajax.loadXML('/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml', core.qweb);
 
     s_options.registry.map = s_options.Class.extend({
-/*        start: function () {
+        /*start: function () {
             this.$filterValueOpts = this.$el.find('[data-map_zoom]');
             console.log("EDITOR");
             console.log(this.$filterValueOpts);
@@ -22,6 +22,7 @@ odoo.define('snippet_openstreet_map.s_google_map_editor', function (require) {
 
         default_location: "(55.75, 37.62)",
 
+        // map function
         map: function (previewMode, value, $li) {
             var self = this;
 
@@ -43,7 +44,7 @@ odoo.define('snippet_openstreet_map.s_google_map_editor', function (require) {
                     }},
                     {text: _t("Cancel"), close: true}
                 ],
-                $content: $(core.qweb.render("snippet_openstreet_map.s_google_map_modal"))
+                $content: $(core.qweb.render("snippet_openstreet_map.s_openstreet_map_modal"))
             });
 
             this.dialog.opened().then((function () {
@@ -56,22 +57,26 @@ odoo.define('snippet_openstreet_map.s_google_map_editor', function (require) {
             self.dialog.open();
         },
 
+        // map type function
         map_type: function (previewMode, value, $li) {
             this.$target.attr('data-map-type', value);
             this.$target.attr('data-map-color', "");
             //this.$target.data('snippet-view').redraw();
         },
 
+        // map color function
         map_color: function (previewMode, value, $li) {
             this.$target.attr('data-map-color', value);
             //this.$target.data('snippet-view').redraw();
         },
 
+        // map zoom function
         map_zoom: function (previewMode, value, $li) {
             this.$target.attr('data-map-zoom', value);
             //this.$target.data('snippet-view').redraw();
         },
 
+        // map gps function
         map_gps: function (previewMode, value, $li) {
             this.$target.attr('data-map-gps', value);
             //this.$target.data('snippet-view').redraw();
@@ -96,6 +101,7 @@ odoo.define('snippet_openstreet_map.s_google_map_editor', function (require) {
                 .addClass('active');
         },
 
+        // on built function
         onBuilt: function () {
             this._super.apply(this, arguments);
             this.map('click', null, null);

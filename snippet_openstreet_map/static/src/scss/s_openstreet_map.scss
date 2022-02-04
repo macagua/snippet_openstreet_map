@@ -2,16 +2,18 @@
 //  ==============================================
 //  Change main snippet's propriety easily
 
-//  es. @s_google_map-desc-bg: red;
+//  es. $s_openstreet_map-desc-bg: red;
 
-    @s_google_map-desc-alpha        : 0.80;
-    @s_google_map-desc-hover-alpha  : 0.55;
+    $s_openstreet_map-desc-alpha        : 0.80;
+    $s_openstreet_map-desc-hover-alpha  : 0.55;
 
-    @s_google_map-desc-bg           : @brand-primary;
-    @s_google_map-desc-hover-bg     : @brand-primary;
+//    $s_openstreet_map-desc-bg           : $brand-primary;
+    $s_openstreet_map-desc-bg           : black;
+//    $s_openstreet_map-desc-hover-bg     : $brand-primary;
+    $s_openstreet_map-desc-hover-bg     : black;
 
-    @s_google_map-desc-p-color      : white;
-    @s_google_map-desc-p-color      : white;
+    $s_openstreet_map-desc-p-color      : white;
+    $s_openstreet_map-desc-p-color      : white;
 
 //  ====== hooks(hook) =====================================
 //  ===========================================================
@@ -26,27 +28,27 @@
 //  Add your rules inside. Your style will take the priority.
 //  Done.
 
-//  .s_google_map-hook() {
+//  @mixin s_openstreet_map-hook() {
 //    background: red;
 //    min-height: 200px;
 //  }
 
-    .s_google_map-hook() {}
+    @mixin s_openstreet_map-hook() {}
 
-    .s_google_map-desc-hook() {}
+    @mixin s_openstreet_map-desc-hook() {}
 
-    .s_google_map-desc-p-hook() {}
+    @mixin s_openstreet_map-desc-p-hook() {}
 
-    .s_google_map-desc-span-hook() {}
+    @mixin s_openstreet_map-desc-span-hook() {}
 
 // Default Style ================================
 // ==============================================
 
-.s_google_map {
+.s_openstreet_map {
   height: 100%;
   min-height: 300px;
   position: relative;
-  .s_google_map-hook(); //.s_google_map backdoor
+  @include s_openstreet_map-hook(); //.s_openstreet_map backdoor
 
   .map_container {
     position: absolute;
@@ -64,8 +66,8 @@
 
   .description{
     z-index: 99;
-    background: @s_google_map-desc-bg;
-    background: rgba(red(@s_google_map-desc-bg), green(@s_google_map-desc-bg), blue(@s_google_map-desc-bg) , @s_google_map-desc-alpha);
+    background: $s_openstreet_map-desc-bg;
+    background: rgba(red($s_openstreet_map-desc-bg), green($s_openstreet_map-desc-bg), blue($s_openstreet_map-desc-bg) , $s_openstreet_map-desc-alpha);
     position: absolute;
     left: 0;
     right: 0;
@@ -73,8 +75,8 @@
     width: 100%;
     padding: 0 1em;
     color: white;
-    .transition(background-color 250ms ease);
-    .s_google_map-desc-hook(); //.description backdoor
+    @include transition(background-color 250ms ease);
+    @include s_openstreet_map-desc-hook(); //.description backdoor
 
     font {
       float: left;
@@ -82,7 +84,7 @@
       margin-bottom: 15px;
       font-weight: bold;
       text-transform: uppercase;
-      .s_google_map-desc-p-hook(); //.description p backdoor
+      @include s_openstreet_map-desc-p-hook(); //.description p backdoor
     }
 
     span{
@@ -91,13 +93,13 @@
       font-weight: normal;
       margin-top: 20px;
       margin-left: 10px;
-      .s_google_map-desc-span-hook(); //.description span backdoor
+      @include s_openstreet_map-desc-span-hook(); //.description span backdoor
     }
   }
 
   &:hover .description{
-      background: @s_google_map-desc-hover-bg;
-      background: rgba(red(@s_google_map-desc-hover-bg), green(@s_google_map-desc-hover-bg), blue(@s_google_map-desc-hover-bg) , @s_google_map-desc-hover-alpha);
+      background: $s_openstreet_map-desc-hover-bg;
+      background: rgba(red($s_openstreet_map-desc-hover-bg), green($s_openstreet_map-desc-hover-bg), blue($s_openstreet_map-desc-hover-bg) , $s_openstreet_map-desc-hover-alpha);
   }
 }
 
@@ -105,7 +107,7 @@
   z-index: 3000;
 }
 
-.pac-container { // google map autosuggestion
+.pac-container { // OpenStreetMap autosuggestion
   z-index: 3001;
   &:after {
     display:none;

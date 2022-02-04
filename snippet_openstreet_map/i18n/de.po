@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: snippet_openstreet_map
-#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_google_map
+#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_openstreet_map
 msgid ""
 "<font>Visit us:</font>\n"
 "        <span> Our office is located in the northeast of Brussels. TEL (555) 432 2365 </span>"
@@ -30,99 +30,99 @@ msgstr ""
 "<span>Sie finden uns im Norden von Brüssel. TEL (555) 432 2365 </span>"
 
 #. module: snippet_openstreet_map
-#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_google_map_option
+#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_openstreet_map_option
 msgid "<i class=\"fa fa-fw fa-cog\"/>Map Options"
 msgstr "<i class=\"fa fa-fw fa-cog\"/>Karten-Optionen"
 
 #. module: snippet_openstreet_map
-#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_google_map_option
+#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_openstreet_map_option
 msgid "<i class=\"fa fa-fw fa-road\"/>Type"
 msgstr "<i class=\"fa fa-fw fa-road\"/>Typ"
 
 #. module: snippet_openstreet_map
-#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_google_map_option
+#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_openstreet_map_option
 msgid "<i class=\"fa fa-fw fa-search\"/>Zoom"
 msgstr "<i class=\"fa fa-fw fa-search\"/>Zoom"
 
 #. module: snippet_openstreet_map
 #. openerp-web
-#: code:addons/snippet_openstreet_map/static/src/xml/s_google_map_modal.xml:5
+#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:5
 #, python-format
 msgid "Address"
 msgstr "Adresse"
 
 #. module: snippet_openstreet_map
 #. openerp-web
-#: code:addons/snippet_openstreet_map/static/src/js/s_google_map_editor.js:35
+#: code:addons/snippet_openstreet_map/static/src/js/s_openstreet_map_editor.js:35
 #, python-format
 msgid "Cancel"
 msgstr "Abbrechen"
 
 #. module: snippet_openstreet_map
 #. openerp-web
-#: code:addons/snippet_openstreet_map/static/src/js/s_google_map_editor.js:22
+#: code:addons/snippet_openstreet_map/static/src/js/s_openstreet_map_editor.js:22
 #, python-format
 msgid "Customize your map"
 msgstr "Passen Sie Ihre Karte an"
 
 #. module: snippet_openstreet_map
 #. openerp-web
-#: code:addons/snippet_openstreet_map/static/src/xml/s_google_map_modal.xml:22
+#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:22
 #, python-format
 msgid "Default"
 msgstr "Standard"
 
 #. module: snippet_openstreet_map
 #. openerp-web
-#: code:addons/snippet_openstreet_map/static/src/xml/s_google_map_modal.xml:21
+#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:21
 #, python-format
 msgid "Flat"
 msgstr "Minimalistisch"
 
 #. module: snippet_openstreet_map
-#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_google_map_option
+#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_openstreet_map_option
 msgid "Hybrid"
 msgstr "Hybrid"
 
 #. module: snippet_openstreet_map
 #. openerp-web
-#: code:addons/snippet_openstreet_map/static/src/xml/s_google_map_modal.xml:18
+#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:18
 #, python-format
 msgid "Marker Style"
 msgstr "Marker-Stil"
 
 #. module: snippet_openstreet_map
-#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_google_map_option
+#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_openstreet_map_option
 msgid "RoadMap"
 msgstr "Straßenkarte"
 
 #. module: snippet_openstreet_map
-#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_google_map_option
+#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_openstreet_map_option
 msgid "Satellite"
 msgstr "Satellit"
 
 #. module: snippet_openstreet_map
 #. openerp-web
-#: code:addons/snippet_openstreet_map/static/src/js/s_google_map_editor.js:24
+#: code:addons/snippet_openstreet_map/static/src/js/s_openstreet_map_editor.js:24
 #, python-format
 msgid "Save"
 msgstr "Speichern"
 
 #. module: snippet_openstreet_map
-#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_google_map_option
+#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_openstreet_map_option
 msgid "Terrain"
 msgstr "Gelände"
 
 #. module: snippet_openstreet_map
 #. openerp-web
-#: code:addons/snippet_openstreet_map/static/src/xml/s_google_map_modal.xml:9
+#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:9
 #, python-format
 msgid "Your address"
 msgstr "Ihre Adresse"
 
 #. module: snippet_openstreet_map
 #. openerp-web
-#: code:addons/snippet_openstreet_map/static/src/xml/s_google_map_modal.xml:14
+#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:14
 #, python-format
 msgid "e.g. De Brouckere, Brussels, Belgium"
 msgstr "z.B. De Brouckere, Brüssel, Belgien"

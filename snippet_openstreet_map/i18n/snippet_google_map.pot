@@ -1,14 +1,14 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* snippet_openstreet_map
+# * snippet_openstreet_map
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 11.0\n"
+"Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-24 07:57+0000\n"
-"PO-Revision-Date: 2019-04-24 07:57+0000\n"
-"Last-Translator: <>\n"
+"POT-Creation-Date: 2022-02-04 14:27+0000\n"
+"PO-Revision-Date: 2022-02-04 14:27+0000\n"
+"Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,113 +16,119 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: snippet_openstreet_map
-#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_google_map
-msgid "<font>Visit us:</font>\n"
-"        <span> Our office is located in the northeast of Brussels. TEL (555) 432 2365 </span>"
-msgstr ""
-
-#. module: snippet_openstreet_map
-#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_google_map_option
-msgid "<i class=\"fa fa-fw fa-cog\"/>Map Options"
-msgstr ""
-
-#. module: snippet_openstreet_map
-#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_google_map_option
-msgid "<i class=\"fa fa-fw fa-road\"/>Type"
-msgstr ""
-
-#. module: snippet_openstreet_map
-#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_google_map_option
-msgid "<i class=\"fa fa-fw fa-search\"/>Zoom"
-msgstr ""
-
-#. module: snippet_openstreet_map
 #. openerp-web
-#: code:addons/snippet_openstreet_map/static/src/xml/s_google_map_modal.xml:5
+#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:0
 #, python-format
-msgid "Address"
+msgid "(55.75, 37.62)"
+msgstr ""
+
+#. module: snippet_openstreet_map
+#: model_terms:ir.ui.view,arch_db:snippet_openstreet_map.s_openstreet_map
+msgid ""
+"<font>Visit us:</font>\n"
+"                <span> Our office is located in the Belgorod city Russian Federation. Whatshapp +7 985 797 2124 </span>"
+msgstr ""
+
+#. module: snippet_openstreet_map
+#: model_terms:ir.ui.view,arch_db:snippet_openstreet_map.s_openstreet_map_option
+msgid "<i class=\"fa fa-fw fa-cog\"/> Map Options"
+msgstr ""
+
+#. module: snippet_openstreet_map
+#: model_terms:ir.ui.view,arch_db:snippet_openstreet_map.s_openstreet_map_option
+msgid "<i class=\"fa fa-fw fa-search\"/> Zoom"
 msgstr ""
 
 #. module: snippet_openstreet_map
 #. openerp-web
-#: code:addons/snippet_openstreet_map/static/src/js/s_google_map_editor.js:35
+#: code:addons/snippet_openstreet_map/static/src/js/s_openstreet_map_editor.js:0
 #, python-format
 msgid "Cancel"
 msgstr ""
 
 #. module: snippet_openstreet_map
 #. openerp-web
-#: code:addons/snippet_openstreet_map/static/src/js/s_google_map_editor.js:22
+#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:0
+#, python-format
+msgid "Center map point"
+msgstr ""
+
+#. module: snippet_openstreet_map
+#. openerp-web
+#: code:addons/snippet_openstreet_map/static/src/js/s_openstreet_map_editor.js:0
 #, python-format
 msgid "Customize your map"
 msgstr ""
 
 #. module: snippet_openstreet_map
 #. openerp-web
-#: code:addons/snippet_openstreet_map/static/src/xml/s_google_map_modal.xml:22
+#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:0
 #, python-format
 msgid "Default"
 msgstr ""
 
 #. module: snippet_openstreet_map
 #. openerp-web
-#: code:addons/snippet_openstreet_map/static/src/xml/s_google_map_modal.xml:21
+#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:0
 #, python-format
 msgid "Flat"
 msgstr ""
 
 #. module: snippet_openstreet_map
-#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_google_map_option
-msgid "Hybrid"
+#. openerp-web
+#: code:addons/snippet_openstreet_map/static/src/js/s_openstreet_map_frontend.js:0
+#, python-format
+msgid ""
+"Map data &copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> "
+"contributors"
 msgstr ""
 
 #. module: snippet_openstreet_map
 #. openerp-web
-#: code:addons/snippet_openstreet_map/static/src/xml/s_google_map_modal.xml:18
+#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:0
 #, python-format
 msgid "Marker Style"
 msgstr ""
 
 #. module: snippet_openstreet_map
-#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_google_map_option
-msgid "RoadMap"
-msgstr ""
-
-#. module: snippet_openstreet_map
-#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_google_map_option
-msgid "Satellite"
+#. openerp-web
+#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:0
+#, python-format
+msgid "Markers"
 msgstr ""
 
 #. module: snippet_openstreet_map
 #. openerp-web
-#: code:addons/snippet_openstreet_map/static/src/js/s_google_map_editor.js:24
+#: code:addons/snippet_openstreet_map/static/src/js/s_openstreet_map_editor.js:0
 #, python-format
 msgid "Save"
 msgstr ""
 
 #. module: snippet_openstreet_map
 #. openerp-web
-#: code:addons/snippet_openstreet_map/static/src/xml/s_google_map_modal.xml:27
+#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:0
 #, python-format
-msgid "Set Google Maps API Key in Website Settings"
-msgstr ""
-
-#. module: snippet_openstreet_map
-#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_google_map_option
-msgid "Terrain"
+msgid "Zoom"
 msgstr ""
 
 #. module: snippet_openstreet_map
 #. openerp-web
-#: code:addons/snippet_openstreet_map/static/src/xml/s_google_map_modal.xml:9
+#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:0
 #, python-format
-msgid "Your address"
+msgid "[(55.75, 37.62), (12.1, 32.2)]"
 msgstr ""
 
 #. module: snippet_openstreet_map
 #. openerp-web
-#: code:addons/snippet_openstreet_map/static/src/xml/s_google_map_modal.xml:14
+#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:0
 #, python-format
-msgid "e.g. De Brouckere, Brussels, Belgium"
+msgid "copy coords of your map"
+msgstr ""
+
+#. module: snippet_openstreet_map
+#. openerp-web
+#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:0
+#, python-format
+msgid "copy your markers coords list"
 msgstr ""
 
