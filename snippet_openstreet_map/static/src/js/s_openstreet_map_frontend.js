@@ -10,7 +10,9 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_frontend', function (requir
     sAnimation.registry.s_openstreet_map = sAnimation.Class.extend({
         selector: 'section.s_openstreet_map',
 
-        // start function
+        /**
+         * Start function.
+         */
         start: function () {
             var defs = [this._super.apply(this, arguments)];
             this.redraw();
@@ -19,7 +21,9 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_frontend', function (requir
 
         map: null,
 
-        // add marker function
+        /**
+         * Add marker function.
+         */
         add_marker: function(points=null) {
             // [[55.75, 37.62],[-12.07173, -76.97581],[29.29255, 48.0808],[-7.551281599999999, 110.8784625],[55.7048496, 37.6223873]]
             var self = this;
@@ -40,30 +44,45 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_frontend', function (requir
             };
         },
 
-        // redraw function
+        /**
+         * Redraw function.
+         */
         redraw: function () {
             var self = this;
+
+            // Update GPS position
             var p = this.$target.attr('data-map-gps').substring(1).slice(0, -1).split(',');
+
+            // Update Map Zoom
             var zoom = this.$target.attr('data-map-zoom');
+            // console.log(zoom)
+
+            // Update Markers
             var markers = this.$target.attr('data-markers');
+            // console.log(markers)
+
+            // Update OpenStreetMap tileLayer
             var maptiles_en = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
             var attribution_msg = _t('Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors');
-            // console.log(zoom)
-            // console.log(markers)
+
             if (markers)
                   markers = JSON.parse(markers);
 
+            // Render Map
             var mapC = this.$target.find('.map_container');
             if (mapC.length) {
                 var point = new L.LatLng(p[0], p[1]);
 
                 // console.log("LEAFLET")
                 self.map = L.map(mapC.get(0)).setView(point, zoom);
+
                 L.tileLayer(maptiles_en, {
                     attribution: attribution_msg
                 }).addTo(self.map);
+
                 mapC.css('width',"100%");
                 mapC.css('height', "100%");
+
                 if (markers)
                     self.add_marker(markers);
                 else

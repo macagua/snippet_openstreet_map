@@ -16,13 +16,18 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_editor', function (require)
             this.$filterValueOpts = this.$el.find('[data-map_zoom]');
             console.log("EDITOR");
             console.log(this.$filterValueOpts);
-
             return this._super.apply(this, arguments);
         },*/
 
         default_location: "(55.75, 37.62)",
 
-        // map function
+        /**
+         * Map function.
+         *
+         * @param {*} type
+         * @param {*} value
+         * @param {*} $li
+         */
         map: function (previewMode, value, $li) {
             var self = this;
 
@@ -40,7 +45,7 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_editor', function (require)
                             "data-markers": this.$("#markers").val(),
                             "data-map-zoom": this.$("#zoom").val(),
                         });
-                        //self.$target.data("snippet-view").redraw();
+                        // self.$target.data("snippet-view").redraw();
                     }},
                     {text: _t("Cancel"), close: true}
                 ],
@@ -57,31 +62,58 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_editor', function (require)
             self.dialog.open();
         },
 
-        // map type function
+        /**
+         * Map Type function.
+         *
+         * @param {*} type
+         * @param {*} value
+         * @param {*} $li
+         */
         map_type: function (previewMode, value, $li) {
             this.$target.attr('data-map-type', value);
             this.$target.attr('data-map-color', "");
-            //this.$target.data('snippet-view').redraw();
+            // this.$target.data('snippet-view').redraw();
         },
 
-        // map color function
+        /**
+         * Map Color function.
+         *
+         * @param {*} type
+         * @param {*} value
+         * @param {*} $li
+         */
         map_color: function (previewMode, value, $li) {
             this.$target.attr('data-map-color', value);
-            //this.$target.data('snippet-view').redraw();
+            // this.$target.data('snippet-view').redraw();
         },
 
-        // map zoom function
+        /**
+         * Map Zoom function.
+         *
+         * @param {*} type
+         * @param {*} value
+         * @param {*} $li
+         */
         map_zoom: function (previewMode, value, $li) {
             this.$target.attr('data-map-zoom', value);
-            //this.$target.data('snippet-view').redraw();
+            // this.$target.data('snippet-view').redraw();
         },
 
-        // map gps function
+        /**
+         * Map GPS function.
+         *
+         * @param {*} type
+         * @param {*} value
+         * @param {*} $li
+         */
         map_gps: function (previewMode, value, $li) {
             this.$target.attr('data-map-gps', value);
-            //this.$target.data('snippet-view').redraw();
+            // this.$target.data('snippet-view').redraw();
         },
 
+        /**
+         * Set active function.
+         */
         _setActive: function () {
             this.$el.find('[data-map_type]')
                 .removeClass('active')
@@ -101,7 +133,10 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_editor', function (require)
                 .addClass('active');
         },
 
-        // on built function
+        /**
+         * Drop and build snippet.
+         * Open the parameters modal on snippet dropped.
+         */
         onBuilt: function () {
             this._super.apply(this, arguments);
             this.map('click', null, null);
