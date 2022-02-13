@@ -127,9 +127,9 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_editor', function (require)
                 .removeClass('active')
                 .filter('[data-map_zoom="'+this.$target.attr('data-map-zoom')+'"]')
                 .addClass('active');
-            this.$el.find('[data-map_gps]')
+            this.$el.find('[data-map_center]')
                 .removeClass('active')
-                .filter('[data-map_gps="'+this.$target.attr('data-map-gps')+'"]')
+                .filter('[data-map_center="'+this.$target.attr('data-map-center')+'"]')
                 .addClass('active');
         },
 
