@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
-    <!-- OpenStreetMap Generic modal Layout -->
+    <!-- OpenStreetMap Options edit mode -->
     <div t-name="snippet_openstreet_map.s_openstreet_map_modal" class="form-horizontal">
+        <!-- Center map point Option -->
         <div class="form-group">
             <label for="center-map"
-                class="col-sm-3 control-label text-left">Center map point</label>
+                class="col-sm-4 control-label text-left">Center map point</label>
             <div class="col-sm-9">
                 <div class="input-group">
                     <div class="input-group-addon">
@@ -19,9 +20,10 @@
             </div>
         </div>
 
+        <!-- Map Markers Points Options -->
         <div class="form-group">
             <label for="markers"
-                class="col-sm-3 control-label text-left">Markers</label>
+                class="col-sm-4 control-label text-left">Map Markers Points</label>
             <div class="col-sm-9">
                 <div class="input-group">
                     <div class="input-group-addon">
@@ -36,9 +38,10 @@
             </div>
         </div>
 
+        <!-- Marker Style Option -->
         <div class="form-group">
             <label for="pin_style"
-                class="col-sm-3 control-label text-left">Marker Style</label>
+                class="col-sm-4 control-label text-left">Marker Style</label>
             <div class="col-sm-9">
                 <select id="pin_style" name="pin_style" class="col-sm-5">
                     <option value="flat">Flat</option>
@@ -47,9 +50,10 @@
             </div>
         </div>
 
+        <!-- Zoom Option -->
         <div class="form-group">
             <label for="zoom"
-                class="col-sm-3 control-label text-left">Zoom</label>
+                class="col-sm-4 control-label text-left">Zoom</label>
             <div class="col-sm-9">
                 <select id="zoom" name="zoom" class="col-sm-5">
                     <option value="2">0</option>
