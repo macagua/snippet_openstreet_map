@@ -57,7 +57,7 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_frontend', function (requir
             var self = this;
 
             // Update Map Center position
-            var p = this.$target.attr('data-map-center').substring(1).slice(0, -1).split(',');
+            var position = this.$target.attr('data-map-center').substring(1).slice(0, -1).split(',');
 
             // Update Map Zoom
             var zoom = this.$target.attr('data-map-zoom');
@@ -80,7 +80,7 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_frontend', function (requir
             var mapC = this.$target.find('.map_container');
             if (mapC.length) {
                 // Represents a geographical point with a certain latitude and longitude
-                var point = new L.LatLng(p[0], p[1]);
+                var point = new L.LatLng(position[0], position[1]);
 
                 // console.log("Render Map with Leaflet JS")
                 // Initialize the map
