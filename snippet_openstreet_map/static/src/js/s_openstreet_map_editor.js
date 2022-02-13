@@ -40,7 +40,7 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_editor', function (require)
                             this.$("#center-map").val(self.default_location);
                         }
                         self.$target.attr({
-                            "data-map-gps": this.$("#center-map").val(),
+                            "data-map-center": this.$("#center-map").val(),
                             "data-pin-style": this.$("#pin_style").val(),
                             "data-markers": this.$("#markers").val(),
                             "data-map-zoom": this.$("#zoom").val(),
@@ -53,7 +53,7 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_editor', function (require)
             });
 
             this.dialog.opened().then((function () {
-                this.$("#center-map").val(self.$target.attr('data-map-gps'));
+                this.$("#center-map").val(self.$target.attr('data-map-center'));
                 this.$("#pin_style").val(self.$target.attr('data-pin-style'));
                 this.$("#markers").val(self.$target.attr('data-markers'));
                 this.$("#zoom").val(self.$target.attr('data-map-zoom'));
@@ -106,8 +106,8 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_editor', function (require)
          * @param {*} value
          * @param {*} $li
          */
-        map_gps: function (previewMode, value, $li) {
-            this.$target.attr('data-map-gps', value);
+        map_center: function (previewMode, value, $li) {
+            this.$target.attr('data-map-center', value);
             // this.$target.data('snippet-view').redraw();
         },
 

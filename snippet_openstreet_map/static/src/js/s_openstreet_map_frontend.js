@@ -45,13 +45,13 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_frontend', function (requir
         },
 
         /**
-         * Redraw function.
+         * Redraw function
          */
         redraw: function () {
             var self = this;
 
-            // Update GPS position
-            var p = this.$target.attr('data-map-gps').substring(1).slice(0, -1).split(',');
+            // Update Map Center position
+            var p = this.$target.attr('data-map-center').substring(1).slice(0, -1).split(',');
 
             // Update Map Zoom
             var zoom = this.$target.attr('data-map-zoom');
