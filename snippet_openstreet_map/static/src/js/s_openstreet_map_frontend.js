@@ -11,7 +11,9 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_frontend', function (requir
         selector: 'section.s_openstreet_map',
 
         /**
-         * Start function.
+         * Start function
+         *
+         * @override
          */
         start: function () {
             var defs = [this._super.apply(this, arguments)];
@@ -22,7 +24,7 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_frontend', function (requir
         map: null,
 
         /**
-         * Add marker function.
+         * Add marker function
          */
         add_marker: function(points=null) {
             // [[55.75, 37.62],[-12.07173, -76.97581],[29.29255, 48.0808],[-7.551281599999999, 110.8784625],[55.7048496, 37.6223873]]
@@ -35,10 +37,12 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_frontend', function (requir
                     [ -7.551281599999999, 110.8784625, "http://www.url_address_03.com/"],
                     [ 55.7048496, 37.6223873, "http://www.url_address_03.com/"]
                 ];
+            // console.log('Map Points: ' + points);
             var marker = [];
             var i;
             for (i = 0; i < points.length; i++) {
                 marker[i] = new L.Marker([points[i][0], points[i][1]]);
+                // console.log('Points: ' + [points[i][0], points[i][1]])
                 marker[i].addTo(self.map);
                 //marker[i].on('click', onClick);
             };
@@ -55,11 +59,11 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_frontend', function (requir
 
             // Update Map Zoom
             var zoom = this.$target.attr('data-map-zoom');
-            // console.log(zoom)
+            // console.log('Map Zoom: ' + zoom);
 
-            // Update Markers
+            // Update Map Markers
             var markers = this.$target.attr('data-markers');
-            // console.log(markers)
+            // console.log('Map Markers: ' + markers);
 
             // Update OpenStreetMap tileLayer
             var maptiles_en = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';

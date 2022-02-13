@@ -18,11 +18,11 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_editor', function (require)
             console.log(this.$filterValueOpts);
             return this._super.apply(this, arguments);
         },*/
-
+        // Map Default Location
         default_location: "(55.75, 37.62)",
 
         /**
-         * Map function.
+         * OpenStreetMap Editor function
          *
          * @param {*} type
          * @param {*} value
@@ -63,7 +63,7 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_editor', function (require)
         },
 
         /**
-         * Map Type function.
+         * Map Type function
          *
          * @param {*} type
          * @param {*} value
@@ -76,7 +76,7 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_editor', function (require)
         },
 
         /**
-         * Map Color function.
+         * Map Color function
          *
          * @param {*} type
          * @param {*} value
@@ -88,7 +88,7 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_editor', function (require)
         },
 
         /**
-         * Map Zoom function.
+         * Map Zoom function
          *
          * @param {*} type
          * @param {*} value
@@ -100,7 +100,7 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_editor', function (require)
         },
 
         /**
-         * Map GPS function.
+         * Map Center position function
          *
          * @param {*} type
          * @param {*} value
@@ -112,7 +112,7 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_editor', function (require)
         },
 
         /**
-         * Set active function.
+         * Set active function
          */
         _setActive: function () {
             this.$el.find('[data-map_type]')
@@ -136,6 +136,8 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_editor', function (require)
         /**
          * Drop and build snippet.
          * Open the parameters modal on snippet dropped.
+         *
+         * @override
          */
         onBuilt: function () {
             this._super.apply(this, arguments);
