@@ -41,8 +41,10 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_frontend', function (requir
             var marker = [];
             var i;
             for (i = 0; i < points.length; i++) {
+                // Represents an icon to provide when creating a marker
                 marker[i] = new L.Marker([points[i][0], points[i][1]]);
-                // console.log('Points: ' + [points[i][0], points[i][1]])
+                // console.log('Points ' + i + ': ' + [points[i][0], points[i][1]])
+                // Adds a marker layer to the map or layer group
                 marker[i].addTo(self.map);
                 //marker[i].on('click', onClick);
             };
@@ -61,25 +63,30 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_frontend', function (requir
             var zoom = this.$target.attr('data-map-zoom');
             // console.log('Map Zoom: ' + zoom);
 
-            // Update Map Markers
+            // Update Map Markers Points
             var markers = this.$target.attr('data-markers');
-            // console.log('Map Markers: ' + markers);
+            // console.log('Map Markers Points: ' + markers);
 
             // Update OpenStreetMap tileLayer
             var maptiles_en = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
             var attribution_msg = _t('Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors');
 
+            // console.log('JSON parse Markers: ' + JSON.parse(markers));
             if (markers)
-                  markers = JSON.parse(markers);
+                // Parse the Map Markers Points as JSON
+                markers = JSON.parse(markers);
 
-            // Render Map
+            // Render Map on the ".map_container" div
             var mapC = this.$target.find('.map_container');
             if (mapC.length) {
+                // Represents a geographical point with a certain latitude and longitude
                 var point = new L.LatLng(p[0], p[1]);
 
-                // console.log("LEAFLET")
+                // console.log("Render Map with Leaflet JS")
+                // Initialize the map
                 self.map = L.map(mapC.get(0)).setView(point, zoom);
 
+                // Load and display tile layers on the map
                 L.tileLayer(maptiles_en, {
                     attribution: attribution_msg
                 }).addTo(self.map);
