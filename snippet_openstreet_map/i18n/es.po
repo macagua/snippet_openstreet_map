@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-19 20:12+0000\n"
-"PO-Revision-Date: 2022-02-04 10:34-0400\n"
+"POT-Creation-Date: 2022-02-13 16:21+0000\n"
+"PO-Revision-Date: 2022-02-13 12:27-0400\n"
 "Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
 "Language-Team: ES <LL@li.org>\n"
 "Language: es\n"
@@ -84,6 +84,13 @@ msgstr "Plano"
 
 #. module: snippet_openstreet_map
 #. openerp-web
+#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:0
+#, python-format
+msgid "Map Markers Points"
+msgstr "Puntos de marcadores de mapa"
+
+#. module: snippet_openstreet_map
+#. openerp-web
 #: code:addons/snippet_openstreet_map/static/src/js/s_openstreet_map_frontend.js:0
 #, python-format
 msgid ""
@@ -99,13 +106,6 @@ msgstr ""
 #, python-format
 msgid "Marker Style"
 msgstr "Estilo del marcador"
-
-#. module: snippet_openstreet_map
-#. openerp-web
-#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:0
-#, python-format
-msgid "Markers"
-msgstr "Marcadores"
 
 #. module: snippet_openstreet_map
 #. openerp-web
@@ -125,7 +125,7 @@ msgstr "Zoom"
 #. openerp-web
 #: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:0
 #, python-format
-msgid "[(55.75, 37.62), (12.1, 32.2)]"
+msgid "[[55.75, 37.62], [12.1, 32.2]]"
 msgstr ""
 
 #. module: snippet_openstreet_map
