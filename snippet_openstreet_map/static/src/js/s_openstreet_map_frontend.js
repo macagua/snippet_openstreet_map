@@ -77,22 +77,22 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_frontend', function (requir
                 markers = JSON.parse(markers);
 
             // Render Map on the ".map_container" div
-            var mapC = this.$target.find('.map_container');
-            if (mapC.length) {
+            var mapContainer = this.$target.find('.map_container');
+            if (mapContainer.length) {
                 // Represents a geographical point with a certain latitude and longitude
                 var point = new L.LatLng(position[0], position[1]);
 
                 // console.log("Render Map with Leaflet JS")
                 // Initialize the map
-                self.map = L.map(mapC.get(0)).setView(point, zoom);
+                self.map = L.map(mapContainer.get(0)).setView(point, zoom);
 
                 // Load and display tile layers on the map
                 L.tileLayer(maptiles_en, {
                     attribution: attribution_msg
                 }).addTo(self.map);
 
-                mapC.css('width',"100%");
-                mapC.css('height', "100%");
+                mapContainer.css('width',"100%");
+                mapContainer.css('height', "100%");
 
                 if (markers)
                     self.add_marker(markers);
