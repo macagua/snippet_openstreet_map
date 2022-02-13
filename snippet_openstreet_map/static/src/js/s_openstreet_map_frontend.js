@@ -2,13 +2,13 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_frontend', function (requir
     'use strict';
 
     var core = require('web.core');
-    var sAnimation = require('website.content.snippets.animation');
     var openStreetScriptLoaded = $.Deferred();
+    var s_animation = require('website.content.snippets.animation');
 
     var _t = core._t;
 
-    sAnimation.registry.s_openstreet_map = sAnimation.Class.extend({
-        selector: 'section.s_openstreet_map',
+    s_animation.registry.s_openstreet_map = s_animation.Class.extend({
+        selector: "section.s_openstreet_map",
 
         /**
          * Start function
@@ -43,7 +43,7 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_frontend', function (requir
             for (i = 0; i < points.length; i++) {
                 // Represents an icon to provide when creating a marker
                 marker[i] = new L.Marker([points[i][0], points[i][1]]);
-                // console.log('Points ' + i + ': ' + [points[i][0], points[i][1]])
+                // console.log('Points ' + i + ': ' + [points[i][0], points[i][1]]);
                 // Adds a marker layer to the map or layer group
                 marker[i].addTo(self.map);
                 //marker[i].on('click', onClick);
@@ -82,14 +82,14 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_frontend', function (requir
                 // Represents a geographical point with a certain latitude and longitude
                 var point = new L.LatLng(position[0], position[1]);
 
-                // console.log("Render Map with Leaflet JS")
+                // console.log("Render Map with Leaflet JS");
                 // Initialize the map
                 self.map = L.map(mapContainer.get(0)).setView(point, zoom);
 
                 // Load and display tile layers on the map
                 L.tileLayer(maptiles, {
                     attribution: attribution_msg
-                }).addTo(self.map);
+                }).addTo(self.map); // Adds a tile layer to the map
 
                 mapContainer.css('width',"100%");
                 mapContainer.css('height', "100%");
@@ -107,7 +107,7 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_frontend', function (requir
     // we don't want to call 2 times the scripts because the first one is not finished.
     // And we cannot put in in an asset because we don't want to load this script on each
     // page, but only page with a OpenStreetMap snippet...
-    sAnimation.registry.s_openstreet_map.prototype.isScriptLoading = false;
+    s_animation.registry.s_openstreet_map.prototype.isScriptLoading = false;
 
     return {
         openStreetScriptLoaded: openStreetScriptLoaded,
