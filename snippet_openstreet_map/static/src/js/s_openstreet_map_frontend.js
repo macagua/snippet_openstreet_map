@@ -68,7 +68,7 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_frontend', function (requir
             // console.log('Map Markers Points: ' + markers);
 
             // Update OpenStreetMap tileLayer
-            var maptiles_en = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+            var maptiles = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
             var attribution_msg = _t('Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors');
 
             // console.log('JSON parse Markers: ' + JSON.parse(markers));
@@ -87,7 +87,7 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_frontend', function (requir
                 self.map = L.map(mapContainer.get(0)).setView(point, zoom);
 
                 // Load and display tile layers on the map
-                L.tileLayer(maptiles_en, {
+                L.tileLayer(maptiles, {
                     attribution: attribution_msg
                 }).addTo(self.map);
 
