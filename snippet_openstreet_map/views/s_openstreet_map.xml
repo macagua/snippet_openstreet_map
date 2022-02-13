@@ -2,8 +2,7 @@
 <odoo>
     <!-- OpenStreetMap Snippet Template -->
     <template id="s_openstreet_map" name="OpenStreetMap">
-        <section class="s_openstreet_map" data-map-type="ROADMAP" data-map-color=""
-                 data-map-zoom="12" data-map-center="(55.75, 37.62)" data-pin-style="flat"
+        <section class="s_openstreet_map" data-map-zoom="12" data-map-center="(55.75, 37.62)" data-pin-style="flat"
                  style="height: 488px; overflow: hidden;">
             <div class="map_container"/>
             <div class="description">
