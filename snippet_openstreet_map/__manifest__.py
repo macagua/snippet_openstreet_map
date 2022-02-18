@@ -8,15 +8,15 @@
     [TAGS] website maps Leaflet OSM map free map osm Leaflet
     map leaflet map maps leafletjs website openstreet map widget""",
     'description': """
-OpenStreetMap Leaflet Snippet HTML for Website
-==============================================
+OpenStreetMap Leaflet Snippet HTML for Website app.
+===================================================
 
 Allows to automatically load data and set the following items:
 --------------------------------------------------------------
     * Add a snippet HTML called *OpenStreetMap* for Website app.
 """,
     'author': "Shurshilov Artem",
-    'website': "http://www.eurodoo.com",
+    'website': "https://www.eurodoo.com",
     # "live_test_url": "https://www.eurodoo.com",
     'maintainer': 'Leonardo J. Caballero G. <leonardocaballero@gmail.com>',
     'support': 'shurshilov.a@yandex.ru',
@@ -28,18 +28,14 @@ Allows to automatically load data and set the following items:
     'version': '13.0.0.1',
     'price': 49,
     'currency': 'EUR',
-    'images': [
-        'static/description/preview.gif',
-    ],
-    # any module necessary for this one to work correctly
     'depends': ['website'],
-    # always loaded
     'data': [
         'views/assets.xml',
         'views/s_openstreet_map.xml',
     ],
     'images': [
         'static/description/icon.png',
+        'static/description/preview.gif',
         'static/description/screenshot_1.png',
         'static/description/screenshot_2.png',
         'static/description/screenshot_3.png',
