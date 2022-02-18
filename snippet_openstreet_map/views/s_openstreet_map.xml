@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- OpenStreetMap Snippet Template -->
+    <!-- "OpenStreetMap" Snippet Template -->
     <template id="s_openstreet_map" name="OpenStreetMap">
-        <section class="s_openstreet_map" data-map-zoom="12" data-map-center="(55.75, 37.62)" data-pin-style="flat"
+        <section class="s_openstreet_map" data-map-zoom="12"
+                 data-map-center="(55.75,37.62)" data-pin-style="flat"
                  style="height: 488px; overflow: hidden;">
             <div class="map_container"/>
             <div class="description">
                 <font>Visit us:</font>
-                <span> Our office is located in the Belgorod city Russian Federation. Whatshapp +7 985 797 2124 </span>
+                <span>Our office is located in the Belgorod city Russian Federation. Whatshapp +7 985 797 2124</span>
             </div>
         </section>
     </template>
 
-    <!-- Add "OpenStreetMap Snippet" Template to the Snippets bar -->
+    <!-- Add "OpenStreetMap" Snippet Template to the Snippets bar -->
     <template id="openstreet_map_snippet" inherit_id="website.snippets">
         <xpath expr="//div[@id='snippet_feature']/div[hasclass('o_panel_body')]/t" position="before">
             <t t-snippet="snippet_openstreet_map.s_openstreet_map"
@@ -23,38 +24,34 @@
     <!-- Snippet's Options -->
     <template id="s_openstreet_map_option" inherit_id="website.snippet_options">
         <xpath expr="//div[@data-js='background']" position="before">
-            <div data-js="map" data-selector="section.s_openstreet_map" data-no-check="true">
-
-                <!-- Form Options  -->
-                <div data-js="openstreet_map_editor" data-selector=".s_openstreet_map">
-                    <we-button data-map="" data-no-preview="true">
-                         <i class="fa fa-fw fa-cog"/> Map Options
-                    </we-button>
-                    <we-collapse-area>
-                        <we-toggler>
-                            <i class="fa fa-fw fa-search"/> Zoom
-                        </we-toggler>
-                        <we-collapse data-no-preview="true">
-                            <we-button data-map_zoom="6">1</we-button>
-                            <we-button data-map_zoom="8">2</we-button>
-                            <we-button data-map_zoom="10">3</we-button>
-                            <we-button data-map_zoom="12">4</we-button>
-                            <we-button data-map_zoom="14">5</we-button>
-                            <we-button data-map_zoom="16">6</we-button>
-                            <we-button data-map_zoom="18">7</we-button>
-                            <we-button data-map_zoom="20">8</we-button>
-                        </we-collapse>
-                    </we-collapse-area>
-                </div>
+            <!-- Form Options -->
+            <div data-js="map" data-selector="section.s_openstreet_map">
+                <we-button data-map="" data-no-preview="true">
+                    <i class="fa fa-fw fa-cog"/> Map Options
+                </we-button>
+                <we-collapse-area>
+                    <we-toggler>
+                        <i class="fa fa-fw fa-search"/> Zoom
+                    </we-toggler>
+                    <we-collapse data-no-preview="true">
+                        <we-button data-map-zoom="6">1</we-button>
+                        <we-button data-map-zoom="8">2</we-button>
+                        <we-button data-map-zoom="10">3</we-button>
+                        <we-button data-map-zoom="12">4</we-button>
+                        <we-button data-map-zoom="14">5</we-button>
+                        <we-button data-map-zoom="16">6</we-button>
+                        <we-button data-map-zoom="18">7</we-button>
+                        <we-button data-map-zoom="20">8</we-button>
+                    </we-collapse>
+                </we-collapse-area>
             </div>
         </xpath>
-    </template>
 
-    <template id="s_openstreet_map_remove_options" inherit_id="website.snippet_options">
+        <!-- "OpenStreetMap" remove options -->
         <xpath expr="//div[@data-js='background']" position="attributes">
             <attribute name="data-exclude" add=".s_openstreet_map" separator=","/>
         </xpath>
-        <xpath expr="//div[@data-js='colorpicker']" position="attributes">
+        <xpath expr="//div[@id='so_main_colorpicker']" position="attributes">
             <attribute name="data-exclude" add=".s_openstreet_map" separator=","/>
         </xpath>
     </template>
