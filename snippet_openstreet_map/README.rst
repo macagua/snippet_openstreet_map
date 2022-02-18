@@ -8,12 +8,12 @@ This module extends the snippets at Website Editor, adding a webpage snippet usi
 Screenshots
 ===========
 
-OpenStreetMap Icon
-------------------
+Snippet Icon
+------------
 
 .. figure:: ./static/description/screenshot_1.png
   :width: 600px
-  :alt: Screenshot Addon for Shop List Tab
+  :alt: Snippet Icon
 
 
 Snippet Options edit mode
@@ -113,6 +113,8 @@ Sponsors
 --------
 
 * `EurOdoo <https://eurodoo.com/>`_.
+
+* `Pidela App <https://pidela.cl/>`_.
 
 Contributors
 ------------
