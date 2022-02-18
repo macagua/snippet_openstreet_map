@@ -1,46 +1,3 @@
-//  ======= Variables ============================
-//  ==============================================
-//  Change main snippet's propriety easily
-
-//  es. $s_openstreet_map-desc-bg: red;
-
-    $s_openstreet_map-desc-alpha        : 0.80;
-    $s_openstreet_map-desc-hover-alpha  : 0.55;
-
-//    $s_openstreet_map-desc-bg           : $brand-primary;
-    $s_openstreet_map-desc-bg           : black;
-//    $s_openstreet_map-desc-hover-bg     : $brand-primary;
-    $s_openstreet_map-desc-hover-bg     : black;
-
-    $s_openstreet_map-desc-p-color      : white;
-    $s_openstreet_map-desc-p-color      : white;
-
-//  ====== hooks(hook) =====================================
-//  ===========================================================
-//  Use them to inject NEW rules or overwrite the old ones.
-//  This method is more maintenable than classic css overwrite
-//  'couse it works also if the snippet's structure will change.
-
-//  How to:
-//  in your theme, just call the backdoor like a normal
-//  CSS class adding parethesis at the end ".backdoor-name()"
-//  (this will prevent the creation of a standard CSS class).
-//  Add your rules inside. Your style will take the priority.
-//  Done.
-
-//  @mixin s_openstreet_map-hook() {
-//    background: red;
-//    min-height: 200px;
-//  }
-
-    @mixin s_openstreet_map-hook() {}
-
-    @mixin s_openstreet_map-desc-hook() {}
-
-    @mixin s_openstreet_map-desc-p-hook() {}
-
-    @mixin s_openstreet_map-desc-span-hook() {}
-
 // Default Style ================================
 // ==============================================
 
@@ -58,13 +15,13 @@
     height: 100%;
   }
 
-  &.readable{
+  &.readable {
     .map_container {
       position: relative;
     }
   }
 
-  .description{
+  .description {
     z-index: 99;
     background: $s_openstreet_map-desc-bg;
     background: rgba(red($s_openstreet_map-desc-bg), green($s_openstreet_map-desc-bg), blue($s_openstreet_map-desc-bg) , $s_openstreet_map-desc-alpha);
@@ -87,7 +44,7 @@
       @include s_openstreet_map-desc-p-hook(); //.description p backdoor
     }
 
-    span{
+    span {
       float: left;
       text-transform: none;
       font-weight: normal;
@@ -97,9 +54,9 @@
     }
   }
 
-  &:hover .description{
-      background: $s_openstreet_map-desc-hover-bg;
-      background: rgba(red($s_openstreet_map-desc-hover-bg), green($s_openstreet_map-desc-hover-bg), blue($s_openstreet_map-desc-hover-bg) , $s_openstreet_map-desc-hover-alpha);
+  &:hover .description {
+    background: $s_openstreet_map-desc-hover-bg;
+    background: rgba(red($s_openstreet_map-desc-hover-bg), green($s_openstreet_map-desc-hover-bg), blue($s_openstreet_map-desc-hover-bg) , $s_openstreet_map-desc-hover-alpha);
   }
 }
 
