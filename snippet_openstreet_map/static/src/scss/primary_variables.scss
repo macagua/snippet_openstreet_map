@@ -2,12 +2,11 @@
 //  ==============================================
 //  Change main snippet's propriety easily
 
-//  es. $s_openstreet_map-desc-bg: red;
-
+//  es. $s-openstreet-map-desc-bg: red;
 $s-openstreet-map-desc-alpha: 0.80;
 $s-openstreet-map-desc-hover-alpha: 0.55;
-$s-openstreet-map-desc-bg: black;
-$s-openstreet-map-desc-hover-bg: black;
+$s-openstreet-map-desc-bg: null;
+$s-openstreet-map-desc-hover-bg: null;
 $s-openstreet-map-desc-p-color: white;
 
 //  ========= hooks(hook) =====================================
@@ -18,7 +17,7 @@ $s-openstreet-map-desc-p-color: white;
 
 //  How to:
 //  in your theme, just call the backdoor like a normal
-//  CSS class adding parethesis at the end ".backdoor-name()"
+//  CSS class adding @include syntax and the hook name ".backdoor-name"
 //  (this will prevent the creation of a standard CSS class).
 //  Add your rules inside. Your style will take the priority.
 //  Done.

@@ -1,39 +1,31 @@
+//  ======= Variables ============================
+//  ==============================================
+//  Change main snippet's propriety easily
+
+$s-openstreet-map-desc-bg: theme-color('primary') !default;
+$s-openstreet-map-desc-hover-bg: theme-color('primary') !default;
+
 // Default Style ================================
 // ==============================================
 
 .s_openstreet_map {
   height: 100%;
-  min-height: 300px;
+  min-height: 100px;
   position: relative;
-  @include s_openstreet_map-hook(); //.s_openstreet_map backdoor
+  @include s-openstreet-map-hook; //.s_openstreet_map backdoor
 
   .map_container {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-  }
-
-  &.readable {
-    .map_container {
-      position: relative;
-    }
+    @include o-position-absolute(0, 0, 0, 0);
   }
 
   .description {
+    @include o-position-absolute(auto, 0, 0, 0);
     z-index: 99;
-    background: $s_openstreet_map-desc-bg;
-    background: rgba(red($s_openstreet_map-desc-bg), green($s_openstreet_map-desc-bg), blue($s_openstreet_map-desc-bg) , $s_openstreet_map-desc-alpha);
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
     padding: 0 1em;
+    background: rgba(red($s-openstreet-map-desc-bg), green($s-openstreet-map-desc-bg), blue($s-openstreet-map-desc-bg) , $s-openstreet-map-desc-alpha);
     color: white;
-    @include transition(background-color 250ms ease);
-    @include s_openstreet_map-desc-hook(); //.description backdoor
+    transition: background-color 250ms ease;
+    @include s-openstreet-map-desc-hook; //.description backdoor
 
     font {
       float: left;
@@ -41,7 +33,7 @@
       margin-bottom: 15px;
       font-weight: bold;
       text-transform: uppercase;
-      @include s_openstreet_map-desc-p-hook(); //.description p backdoor
+      @include s-openstreet-map-desc-p-hook; //.description p backdoor
     }
 
     span {
@@ -50,13 +42,13 @@
       font-weight: normal;
       margin-top: 20px;
       margin-left: 10px;
-      @include s_openstreet_map-desc-span-hook(); //.description span backdoor
+      @include s-openstreet-map-desc-span-hook; //.description span backdoor
     }
   }
 
   &:hover .description {
-    background: $s_openstreet_map-desc-hover-bg;
-    background: rgba(red($s_openstreet_map-desc-hover-bg), green($s_openstreet_map-desc-hover-bg), blue($s_openstreet_map-desc-hover-bg) , $s_openstreet_map-desc-hover-alpha);
+    background: $s-openstreet-map-desc-hover-bg;
+    background: rgba(red($s-openstreet-map-desc-hover-bg), green($s-openstreet-map-desc-hover-bg), blue($s-openstreet-map-desc-hover-bg), $s-openstreet-map-desc-hover-alpha);
   }
 }
 
