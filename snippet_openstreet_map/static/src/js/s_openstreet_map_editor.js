@@ -9,8 +9,10 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_editor', function (require)
 
     var _t = core._t;
 
+    // Load QWeb XML Template
     ajax.loadXML('/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml', core.qweb);
 
+    // Registries the function for open the customization dialog
     sOptions.registry.osmap = sOptions.Class.extend({
         // Map Default Location
         defaultLocation: '(55.75,37.62)',
@@ -35,6 +37,7 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_editor', function (require)
          */
         onBuilt: function () {
             this._super.apply(this, arguments);
+            // Call function for open the customization dialog
             this.osmap('click', null, null);
         },
 
@@ -62,7 +65,7 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_editor', function (require)
                         }
                         self.$target.attr({
                             'data-map-center': this.$('#center-map').val(),
-                            'data-pin-style': this.$('#pin_style').val(),
+                            'data-pin-style': this.$('#pin_style').val(), // Marker Style Options
                             'data-markers': this.$('#markers').val(),
                             'data-map-zoom': this.$('#zoom').val(),
                         });
@@ -75,7 +78,7 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_editor', function (require)
 
             this.dialog.opened().then((function () {
                 this.$('#center-map').val(self.$target.attr('data-map-center'));
-                this.$('#pin_style').val(self.$target.attr('data-pin-style'));
+                this.$('#pin_style').val(self.$target.attr('data-pin-style')); // Marker Style Options
                 this.$('#markers').val(self.$target.attr('data-markers'));
                 this.$('#zoom').val(self.$target.attr('data-map-zoom'));
             }).bind(this.dialog));

@@ -38,7 +38,7 @@
             </div>
         </div>
 
-        <!-- Marker Style Option -->
+        <!-- Marker Style Options -->
         <div class="form-group">
             <label for="pin_style"
                 class="col-sm-4 control-label text-left">Marker Style</label>

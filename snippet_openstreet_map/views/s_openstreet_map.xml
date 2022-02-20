@@ -26,9 +26,11 @@
         <xpath expr="//div[@data-js='background']" position="before">
             <!-- Form Options -->
             <div data-js="osmap" data-selector="section.s_openstreet_map">
+                <!-- Map Options -->
                 <we-button data-osmap="" data-no-preview="true">
                     <i class="fa fa-fw fa-cog"/> Map Options
                 </we-button>
+                <!-- Map Zoom Options -->
                 <we-collapse-area>
                     <we-toggler>
                         <i class="fa fa-fw fa-search"/> Zoom
