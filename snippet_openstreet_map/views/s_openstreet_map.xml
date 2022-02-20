@@ -25,8 +25,8 @@
     <template id="s_openstreet_map_option" inherit_id="website.snippet_options">
         <xpath expr="//div[@data-js='background']" position="before">
             <!-- Form Options -->
-            <div data-js="map" data-selector="section.s_openstreet_map">
-                <we-button data-map="" data-no-preview="true">
+            <div data-js="osmap" data-selector="section.s_openstreet_map">
+                <we-button data-osmap="" data-no-preview="true">
                     <i class="fa fa-fw fa-cog"/> Map Options
                 </we-button>
                 <we-collapse-area>

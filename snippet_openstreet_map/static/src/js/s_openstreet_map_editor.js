@@ -11,7 +11,7 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_editor', function (require)
 
     ajax.loadXML('/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml', core.qweb);
 
-    sOptions.registry.map = sOptions.Class.extend({
+    sOptions.registry.osmap = sOptions.Class.extend({
         // Map Default Location
         defaultLocation: '(55.75,37.62)',
 
@@ -35,7 +35,7 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_editor', function (require)
          */
         onBuilt: function () {
             this._super.apply(this, arguments);
-            this.map('click', null, null);
+            this.osmap('click', null, null);
         },
 
         //--------------------------------------------------------------------------
@@ -49,7 +49,7 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_editor', function (require)
          * @param {*} value
          * @param {*} $opt
          */
-        map: function (previewMode, value, $opt) {
+        osmap: function (previewMode, value, $opt) {
             var self = this;
 
             this.dialog = new Dialog(this, {
