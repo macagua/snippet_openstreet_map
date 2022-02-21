@@ -7,10 +7,10 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 11.0\n"
+"Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-24 07:57+0000\n"
-"PO-Revision-Date: 2019-04-24 11:19+0000\n"
+"POT-Creation-Date: 2022-02-20 23:53+0000\n"
+"PO-Revision-Date: 2022-02-20 23:53+0000\n"
 "Last-Translator: Yenthe Van Ginneken <yenthespam@gmail.com>, 2019\n"
 "Language-Team: Dutch (https://www.transifex.com/odoo/teams/41243/nl/)\n"
 "MIME-Version: 1.0\n"
@@ -20,108 +20,112 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: snippet_openstreet_map
-#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_openstreet_map
+#. openerp-web
+#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:0
+#, python-format
+msgid "(55.75, 37.62)"
+msgstr ""
+
+#. module: snippet_openstreet_map
+#: model_terms:ir.ui.view,arch_db:snippet_openstreet_map.s_openstreet_map
 msgid ""
 "<font>Visit us:</font>\n"
-"        <span> Our office is located in the northeast of Brussels. TEL (555) 432 2365 </span>"
+"                <span>Our office is located in the Belgorod city Russian Federation. Whatshapp +7 985 797 2124</span>"
 msgstr ""
 "<font>Bezoek ons:</font>\n"
 "<span>Ons kantoor bevind zich in het noordoosten van Brussel. TEL (555) 432 2365</span>"
 
 #. module: snippet_openstreet_map
-#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_openstreet_map_option
-msgid "<i class=\"fa fa-fw fa-cog\"/>Map Options"
-msgstr "<i class=\"fa fa-fw fa-cog\"/>Map opties"
+#: model_terms:ir.ui.view,arch_db:snippet_openstreet_map.s_openstreet_map_option
+msgid "<i class=\"fa fa-fw fa-cog\"/> Map Options"
+msgstr "<i class=\"fa fa-fw fa-cog\"/> Map opties"
 
 #. module: snippet_openstreet_map
-#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_openstreet_map_option
-msgid "<i class=\"fa fa-fw fa-road\"/>Type"
-msgstr "<i class=\"fa fa-fw fa-road\"/>Soort"
-
-#. module: snippet_openstreet_map
-#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_openstreet_map_option
-msgid "<i class=\"fa fa-fw fa-search\"/>Zoom"
-msgstr "<i class=\"fa fa-fw fa-search\"/>Zoom"
+#: model_terms:ir.ui.view,arch_db:snippet_openstreet_map.s_openstreet_map_option
+msgid "<i class=\"fa fa-fw fa-search\"/> Zoom"
+msgstr "<i class=\"fa fa-fw fa-search\"/> Zoom"
 
 #. module: snippet_openstreet_map
 #. openerp-web
-#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:5
-#, python-format
-msgid "Address"
-msgstr "Adre"
-
-#. module: snippet_openstreet_map
-#. openerp-web
-#: code:addons/snippet_openstreet_map/static/src/js/s_openstreet_map_editor.js:35
+#: code:addons/snippet_openstreet_map/static/src/js/s_openstreet_map_editor.js:0
 #, python-format
 msgid "Cancel"
 msgstr "Annuleer"
 
 #. module: snippet_openstreet_map
 #. openerp-web
-#: code:addons/snippet_openstreet_map/static/src/js/s_openstreet_map_editor.js:22
+#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:0
+#, python-format
+msgid "Center map point"
+msgstr ""
+
+#. module: snippet_openstreet_map
+#. openerp-web
+#: code:addons/snippet_openstreet_map/static/src/js/s_openstreet_map_editor.js:0
 #, python-format
 msgid "Customize your map"
 msgstr "Personaliseer uw kaart"
 
 #. module: snippet_openstreet_map
 #. openerp-web
-#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:22
+#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:0
 #, python-format
 msgid "Default"
 msgstr "Standaar"
 
 #. module: snippet_openstreet_map
 #. openerp-web
-#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:21
+#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:0
 #, python-format
 msgid "Flat"
 msgstr "Vast"
 
 #. module: snippet_openstreet_map
-#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_openstreet_map_option
-msgid "Hybrid"
-msgstr "Hybride"
+#. openerp-web
+#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:0
+#, python-format
+msgid "Map Markers Points"
+msgstr ""
 
 #. module: snippet_openstreet_map
 #. openerp-web
-#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:18
+#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:0
 #, python-format
 msgid "Marker Style"
 msgstr "Markeer stijl"
 
 #. module: snippet_openstreet_map
-#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_openstreet_map_option
-msgid "RoadMap"
-msgstr "Wegenkaart"
-
-#. module: snippet_openstreet_map
-#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_openstreet_map_option
-msgid "Satellite"
-msgstr "Satelliet"
-
-#. module: snippet_openstreet_map
 #. openerp-web
-#: code:addons/snippet_openstreet_map/static/src/js/s_openstreet_map_editor.js:24
+#: code:addons/snippet_openstreet_map/static/src/js/s_openstreet_map_editor.js:0
 #, python-format
 msgid "Save"
 msgstr "Opslaan"
 
 #. module: snippet_openstreet_map
-#: model:ir.ui.view,arch_db:snippet_openstreet_map.s_openstreet_map_option
-msgid "Terrain"
-msgstr "Terrein"
+#. openerp-web
+#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:0
+#, python-format
+msgid "Zoom"
+msgstr ""
 
 #. module: snippet_openstreet_map
 #. openerp-web
-#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:9
+#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:0
 #, python-format
-msgid "Your address"
-msgstr "Uw adres"
+msgid "[[55.75, 37.62], [12.1, 32.2]]"
+msgstr ""
 
 #. module: snippet_openstreet_map
 #. openerp-web
-#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:14
+#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:0
 #, python-format
-msgid "e.g. De Brouckere, Brussels, Belgium"
-msgstr "b.v. De Brouckere, Brussel, België"
+msgid "copy coords of your map"
+msgstr ""
+
+#. module: snippet_openstreet_map
+#. openerp-web
+#: code:addons/snippet_openstreet_map/static/src/xml/s_openstreet_map_modal.xml:0
+#, python-format
+msgid "copy your markers coords list"
+msgstr ""
+
