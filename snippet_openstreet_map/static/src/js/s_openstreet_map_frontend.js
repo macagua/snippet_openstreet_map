@@ -7,6 +7,7 @@ odoo.define('snippet_openstreet_map.s_openstreet_map_frontend', function (requir
 
     var _t = core._t;
 
+    // Registries animation snippet for the Map render
     s_animation.registry.s_openstreet_map = s_animation.Class.extend({
         selector: "section.s_openstreet_map",
 
